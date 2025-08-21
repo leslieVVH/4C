@@ -1,0 +1,71 @@
+body {
+  font-family: 'Comic Neue', cursive;
+  background-color: white;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.feed-container {
+  width: 440px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.post {
+  border: 3px solid black;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.post strong {
+  font-size: 10 px;
+}
+
+.post span {
+  font-size: 10px;
+  justify-content: end;
+}
+
+.post p {
+  font-size: px;
+  margin: 10px 0 10 0;
+}
+
+button {
+  background-color: #FFD700;
+  border: 2px solid black;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0px 100px;
+  box-shadow: 3px 2px 0 black;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+a {
+  color: #007bff;
+  text-decoration: underline;
+}

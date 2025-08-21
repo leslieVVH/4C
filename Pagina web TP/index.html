@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de Cosas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Registro de Cosas</h1>
+    <p class="desc">Agrega ítems con categoría, cantidad y fecha. Todo queda guardado en tu navegador (localStorage).</p>
+
+    <div class="grid">
+      <!-- FORMULARIO -->
+      <div class="card">
+        <h2 style="margin:0 0 8px;font-size:20px">Nuevo ítem</h2>
+        <form id="form">
+          <input type="hidden" id="idx" value="">
+          <label for="nombre">Nombre *</label>
+          <input id="nombre" required placeholder="Ej: Caja de cartón">
+
+          <label for="categoria">Categoría</label>
+          <input id="categoria" placeholder="Ej: Reciclaje / Oficina">
+
+          <div class="row">
+            <div>
+              <label for="cantidad">Cantidad</label>
+              <input id="cantidad" type="number" min="0" step="1" placeholder="Ej: 3">
+            </div>
+            <div>
+              <label for="fecha">Fecha</label>
+              <input id="fecha" type="date">
+            </div>
+          </div>
+
+          <label for="nota">Nota</label>
+          <input id="nota" placeholder="Comentario opcional">
+
+          <div class="actions">
+            <button type="submit" id="btn-guardar">Guardar</button>
+            <button type="button" class="btn-secondary" id="btn-limpiar">Limpiar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- LISTADO -->
+      <div class="card">
+        <div class="toolbar">
+          <input id="buscar" placeholder="Buscar por nombre o categoría…">
+          <button type="button" class="btn-secondary" id="btn-exportar">Exportar CSV</button>
+          <button type="button" class="btn-warn" id="btn-importar">Importar CSV</button>
+          <input id="file-csv" type="file" accept=".csv" style="display:none">
+          <button type="button" class="btn-danger" id="btn-borrar-todo" title="Borrar TODOS los ítems">Borrar todo</button>
+        </div>
+
+        <div style="overflow:auto; max-height: 480px; border-radius:12px;">
+          <table id="tabla">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Cant.</th>
+                <th>Fecha</th>
+                <th>Nota</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <tr><td class="empty" colspan="7">No hay registros todavía.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="foot">
+          <span id="contador">0 ítems</span>
+          <span><span class="badge">LocalStorage</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="java.js"></script>
+</body>
+</html>

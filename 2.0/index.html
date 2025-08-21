@@ -1,107 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Enlace de bootsrap-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-<title>Guia de Ejercicios con Bootsrap</title>
+  <meta charset="UTF-8">
+  <title>Your Feed</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<nav class="navbar navbar-expand-lg bg-primary navbar-dark">
-    <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-            </a>
-            <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-        </ul>
-        <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </div>
-    </div>
-</nav>
-<main class="container mt-4">
-    <section class="row">
-    <section class="col-md-6">
-        <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Ejercicio 1: Agregar lista de compras</h5>
-            <input type="text" class="form-control" id="lista">
-            <ul class="card-text" id="resultado"></ul>
-            <button onclick="hola()" href="#" class="btn btn-primary">Agregar</button>
-          </div>
-        </div>
-      </section>
-      <section class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Ejercicio 2: Eliminar último elemento</h5>
-            <input type="text" class="form-control" id="lista2">
-            <ul class="list-group mb-3" id="resultado2"></ul>
-            <button onclick="agregarElemento2()" class="btn btn-primary">Agregar</button>
-            <button onclick="eliminarUltimoElemento()" class="btn btn-danger">Eliminar Ultimo</button>
-          </div>
-        </div>
-      </section>
-      <section class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Ejercicio 3: Agregar al inicio de la lista</h5>
-            <input type="text" class="form-control" id="lista3">
-            <ul class="list-group mb-3" id="resultado3"></ul>
-            <button onclick="agregar_inicio()" class="btn btn-primary">Agregar al inicio</button>
-          </div>
-        </div>
-      </section>
-      <section class="col-md-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Ejercicio 4: Quitar el primer</h5>
-            <input type="text" class="form-control" id="lista4">
-            <ul class="list-group mb-3" id="resultado4"></ul>
-            <button onclick="agregar_inicio2()" class="btn btn-primary">Agregar</button>
-            <button onclick="eliminar_primer_elemento()" class="btn btn-danger">Eliminar</button>
-          </div>
-        </div>
-      </section>
-    </section>
-    </div>
-    </div>
-  </main>
-  <script src="scrip.js"></script>
-  <!-- Enlace de bootsrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-</body>
+  <div class="feed-container">
+    <h2>Your Feed</h2>
 
+    <div class="post">
+      <p><strong>Neil M</strong> <span class="likes" id="likes-0">9</span> like(s)</p>
+      <p>I just set up this new discord bot, let me know what you all think. <a href="#">link</a></p>
+      <button onclick="addLike(0)">Like</button>
+    </div>
+
+    <div class="post">
+      <p><strong>Nichole K</strong> <span class="likes" id="likes-1">12</span> like(s)</p>
+      <p>Just finished my <a href="#">next comic</a>, check it out.</p>
+      <button onclick="addLike(1)">Like</button>
+    </div>
+
+    <div class="post">
+      <p><strong>Jim R</strong> <span class="likes" id="likes-2">9</span> like(s)</p>
+      <p>I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
+      <button onclick="addLike(2)">Like</button>
+    </div>
+  <script src="scrip.js"></script>
+</body>
+</html>
