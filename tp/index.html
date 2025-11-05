@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <!-- SEO básico -->
+    <!--Iconos--> 
+    <link rel="icon" href="img/LogoIcon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        RecoTrash — Papelera inteligente que separa y motiva el reciclaje
+    </title>
+    <meta name="description"
+        content="RecoTrash: prototipo de basurero inteligente para separar residuos, motivar el reciclaje escolar y cumplir con el ODS 12 mediante sensores y un sistema de puntos." />
+    <meta name="theme-color" content="#0b0c10" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="RecoTrash — Papelera inteligente" />
+    <meta property="og:description"
+        content="Clasificación automática, métricas y ranking por cursos para motivar el reciclaje." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+
+    <!-- Fuentes (sin frameworks) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Accesibilidad: enlace para saltar al contenido -->
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+</head>
+
+<body>
+    <!-- Header con navegación sticky -->
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <!-- Espacio reservado para LOGO -->
+            <a href="#inicio" class="brand" aria-label="Ir al inicio">
+                <img id="logo" src="img/ChatGPT Image 13 ago 2025, 10_49_33.png" alt="logo">
+            </a>
+
+            <button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="burger" aria-hidden="true"></span>
+            </button>
+
+            <nav id="nav" class="nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#descripcion">Descripción</a></li>
+                    <li><a href="#objetivos">Objetivos</a></li>
+                    <li><a href="#problematica">Problemática</a></li>
+                    <li><a href="#solucion">Solución</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero inspirado en la referencia (oscuro, tipográfico) -->
+    <section id="inicio" class="hero" aria-label="Portada">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <h1 class="display reveal">
+                RecoTrash<br />
+                <span class="sub">Papelera inteligente que separa y enseña a reciclar</span>
+            </h1>
+            <p class="lead reveal delay-1">
+                Prototipo escolar con sensores y visualización de datos para impulsar
+                el ODS 12: Producción y Consumo Responsables.
+            </p>
+            <div class="cta-group reveal delay-2">
+                <a href="#solucion" class="btn primary">Ver cómo funciona</a>
+                <a href="#galeria" class="btn ghost">Explorar galería</a>
+            </div>
+            <ul class="meta reveal delay-3" aria-label="Datos del proyecto">
+                <li><strong>Curso:</strong> 4° Medio – Desarrollo de Proyectos TP</li>
+                <li><strong>Entrega:</strong> 30/08/25</li>
+            </ul>
+        </div>
+    </section>
+
+    <main id="contenido">
+        <!-- Descripción -->
+        <section id="descripcion" class="section section-balanced">
+            <div class="container grid-2">
+                <div class="stack">
+                    <h2 class="section-title reveal">Descripción del Proyecto</h2>
+                    <p class="reveal delay-1">
+                        Identificamos la baja efectividad del reciclaje en colegios por
+                        mezcla de residuos, falta de separación y poca motivación.
+                        RecoTrash propone una solución alcanzable con materiales de bajo
+                        costo, sensores simples y programación en Arduino/ESP32.
+                    </p>
+                    <ul class="tick-list reveal delay-2">
+                        <li>Prototipo 3D con materiales reciclados (cartón, madera).</li>
+                        <li>
+                            Sensores de color, peso y metal; verificación por IR en
+                            contenedores.
+                        </li>
+                        <li>Pantalla LCD para estados e indicadores de reciclaje.</li>
+                        <li>Registro de puntos por curso y ranking en la web/app.</li>
+                    </ul>
+                    <div class="badges reveal delay-3" aria-label="ODS relacionado">
+                        <span class="badge">ODS 12</span>
+                        <span class="badge">IoT</span>
+                        <span class="badge">Arduino/ESP32</span>
+                    </div>
+                </div>
+                <figure class="card glass reveal" aria-labelledby="fig-desc">
+                    <div class="media media-gradient" aria-hidden="true"></div>
+                    <figcaption id="fig-desc">
+                        Prototipo: separación automática en cuatro compartimentos.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Objetivos / Alcance -->
+        <section id="objetivos" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Objetivos y Alcance</h2>
+                <div class="goals grid-3">
+                    <article class="goal reveal">
+                        <h3>Motivar hábitos</h3>
+                        <p>
+                            Gamificación con puntos y ranking por cursos para incentivar la
+                            separación correcta.
+                        </p>
+                    </article>
+                    <article class="goal reveal delay-1">
+                        <h3>Clasificar residuos</h3>
+                        <p>
+                            Detección del tipo de material y derivación automática al
+                            contenedor adecuado.
+                        </p>
+                    </article>
+                    <article class="goal reveal delay-2">
+                        <h3>Datos útiles</h3>
+                        <p>
+                            Estadísticas en pantalla y exportables para seguimiento del
+                            reciclaje.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- KPIs animados -->
+                <div class="kpis">
+                    <div class="kpi reveal">
+                        <span class="kpi-number" data-target="4">3</span><span class="kpi-label">Tipos de
+                            residuos</span>
+                    </div>
+                    <div class="kpi reveal">
+                        <span class="kpi-number" data-target="100">20%</span><span class="kpi-label">Estudiantes
+                            motivados</span>
+                    </div>
+                    <div class="kpi reveal">
+                        <span class="kpi-number" data-target="12">1</span><span class="kpi-label">Meses de
+                            proyecto</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problemática (con datos) -->
+        <section id="problematica" class="section section-balanced">
+            <div class="container grid-2">
+                <div class="stack">
+                    <h2 class="section-title reveal">Problemática</h2>
+                    <p class="reveal delay-1">
+                        En Chile la tasa de reciclaje domiciliario ronda el 4% y en
+                        colegios es menor; los residuos se mezclan, falta señalética y la
+                        logística es irregular. RecoTrash ataca estos puntos con
+                        separación asistida, feedback inmediato y un sistema de
+                        incentivos.
+                    </p>
+                    <ul class="dash-list reveal delay-2">
+                        <li>
+                            Contenedores con residuos mal clasificados (+78% en muestreos).
+                        </li>
+                        <li>Sólo el 22% separa correctamente por falta de incentivos.</li>
+                        <li>
+                            Infraestructura insuficiente y retiros municipales irregulares.
+                        </li>
+                    </ul>
+                </div>
+                <div class="card glass reveal">
+                    <h3 class="mini-title">ODS asociado</h3>
+                    <p>ODS 12 – Producción y Consumo Responsables.</p>
+                    <div class="progress-group">
+                        <span>Concientización</span>
+                        <div class="progress"><span style="--value: 78"></span></div>
+                        <small>Mezcla de residuos detectada en muestreos.</small>
+                    </div>
+                    <div class="progress-group">
+                        <span>Separación correcta</span>
+                        <div class="progress"><span style="--value: 22"></span></div>
+                        <small>Participación base estimada de estudiantes.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solución técnica -->
+        <section id="solucion" class="section">
+            <div class="container grid-2">
+                <div class="stack">
+                    <h2 class="section-title reveal">Nuestra Solución</h2>
+                    <p class="reveal delay-1">
+                        Basurero inteligente con sensores (color, peso, metal) y
+                        verificación IR interna, controlado por Arduino/ESP32. Una
+                        pantalla guía la separación y registra puntos por curso para un
+                        ranking web.
+                    </p>
+                    <ul class="tick-list reveal delay-2">
+                        <li>4 compartimentos: plástico, papel, metal y orgánicos.</li>
+                        <li>Mecanismo de compuertas/banda para derivación automática.</li>
+                        <li>Pantalla LCD con mensajes y métricas.</li>
+                        <li>Futuro: conectividad IoT para reportes en tiempo real.</li>
+                    </ul>
+                    <div class="cta-inline reveal delay-3">
+                        <a class="btn primary" href="#contacto">Quiero colaborar</a>
+                        <a class="btn ghost" href="#equipo">Conoce al equipo</a>
+                    </div>
+                </div>
+
+                <!-- Mockup/Video placeholder -->
+                <figure class="mockup reveal" aria-labelledby="fig-mockup">
+                    <div class="device">
+                        <div class="screen">
+                            <div class="start-screen">
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption id="fig-mockup">
+                        Vista simulada de la app web de ranking por cursos.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <!-- Equipo -->
+        <section id="equipo" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Equipo</h2>
+                <div class="team grid-3">
+                    <article class="member reveal">
+                        <h3>Dirección</h3>
+                        <p>
+                            <strong>Damian Oyarce, Vicente Rojas</strong><br />Líderes de
+                            Proyecto
+                        </p>
+                    </article>
+                    <article class="member reveal delay-1">
+                        <h3>Programación</h3>
+                        <p>
+                            <strong>Danielle Figueroa</strong><br />Sensores y lógica
+                            Arduino
+                        </p>
+                    </article>
+                    <article class="member reveal delay-2">
+                        <h3>Investigación</h3>
+                        <p>
+                            <strong>David Tobar</strong><br />ODS y tecnologías aplicables
+                        </p>
+                    </article>
+                    <article class="member reveal">
+                        <h3>Diseño</h3>
+                        <p>
+                            <strong>Meli (Leslie) Villagra</strong><br />Bocetos y esquema
+                            3D
+                        </p>
+                    </article>
+                    <article class="member reveal delay-1">
+                        <h3>Relatoría</h3>
+                        <p>
+                            <strong>Miguel Aguilar</strong><br />Documento y presentación
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                © <span id="year"></span> RecoTrash — ODS 12. Hecho por el equipo:
+                Miguel, Danielle, Damian, Vicente, David, Leslie.
+            </p>
+            <a href="#inicio" class="to-top" aria-label="Volver arriba">↑</a>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
